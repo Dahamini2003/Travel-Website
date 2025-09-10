@@ -1,0 +1,106 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('assets/home3-banner1-1.png'); /* or video fallback */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* ✨ key line for parallax */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+
+/* Dark overlay */
+.hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(59, 58, 58, 0.5);
+  z-index: 1;
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.hero .btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Cards overlapping hero */
+.destination-cards {
+  margin-top: -100px; /* pull cards up */
+  position: relative;
+  z-index: 3;
+}
+
+.destination-cards .card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-cards .card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+
+.destination-cards .card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+
+/* Gallery */
+#gallery img {
+  transition: transform 0.4s ease;
+}
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #111;
+}
